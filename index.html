@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///C:/Users/annab/Downloads/index_1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Alternate Path Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+ <link href="./index_2_files/css2" rel="stylesheet">
+
+
+  <style>
+    :root {
+      --primary: #5D3FD3;       /* iris purple */
+      --primary-dark: #4a33ad; 
+      --bg-light: #f5f7fb;
+      --text: #222;
+      --muted: #666;
+      --border: #e0e4ef;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: white;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+    .nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 0;
+    }
+ .logo {
+  font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo-main {
+  text-shadow: 0 0 12px rgba(180, 140, 255, 0.35);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;               /* super fat */
+  letter-spacing: 0.05em;         /* still strong but less stretched */
+  font-size: 2rem;                /* larger, more presence */
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    90deg,
+    #4b2ca3,   /* deep iris purple */
+    #c4a8ff    /* soft light purple */
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+.logo-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #6b7280;                /* soft grey; you can change to var(--muted) if you like */
+}
+
+    .nav-links { display: flex; gap: 20px; font-size: 0.95rem; }
+    .nav-links a { padding-bottom: 2px; border-bottom: 2px solid transparent; }
+    .nav-links a:hover { border-color: var(--primary); }
+
+    .hero {
+        
+      background-image: 
+	url('image_2.png')
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 100px 0;
+      mid-height:400px
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 32px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: clamp(2.1rem, 3vw, 2.8rem);
+      margin-bottom: 16px;
+    }
+    .hero p { color: var(--muted); margin-bottom: 20px; }
+
+    .hero-actions {
+      display: flex; flex-wrap: wrap;
+      gap: 12px; align-items: center;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-align: center;
+    }
+    .btn-primary {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      border-color: var(--primary-dark);
+    }
+    .btn-outline {
+      border-color: var(--border);
+      background: white;
+      color: var(--text);
+    }
+    .btn-outline:hover { border-color: var(--primary); }
+
+    .hero-card {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      font-size: 0.9rem;
+    }
+    .hero-card h3 { margin-bottom: 10px; font-size: 1rem; }
+    .hero-stats {
+      display: flex;
+      gap: 16px;
+      margin-top: 14px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .hero-stats strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    section { padding: 48px 0; }
+    section:nth-of-type(odd) { background: var(--bg-light); }
+
+    .section-title { font-size: 1.6rem; margin-bottom: 10px; }
+    .section-subtitle {
+      color: var(--muted);
+      margin-bottom: 24px;
+      max-width: 560px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .card h3 { font-size: 1rem; margin-bottom: 6px; }
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      background: #e8f0ff;
+      color: #1f3b7b;
+      margin-bottom: 8px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+      gap: 24px;
+      align-items: flex-start;
+    }
+    form { display: grid; gap: 10px; font-size: 0.9rem; }
+    label { font-weight: 500; font-size: 0.85rem; }
+    input, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+    textarea { min-height: 100px; resize: vertical; }
+
+    footer {
+      padding: 16px 0 20px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      background: white;
+    }
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 780px) {
+      .hero-grid, .grid-3, .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header { position: static; }
+      .nav { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+
+
+/* --- Services Layout Fix --- */
+/* --- Services Layout --- */
+
+.services-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.services-section h2 {
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.services-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+
+
+.tag {
+    font-size: 0.85rem;          /* Bigger text */
+    font-weight: 700;            /* Bolder */
+    background: #4b2ca3;         /* Darker iris purple */
+    color: white;                /* High contrast */
+    padding: 6px 14px;           /* Thicker pill */
+    border-radius: 999px;        /* Keep soft pill shape */
+    margin-bottom: 10px;
+    display: inline-block;
+    letter-spacing: 0.3px;       /* More premium look */
+}
+
+
+.services-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.services-image img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 14px;
+}
+
+
+<section id="services" class="services-section">
+ <div class="container">
+
+   <h2>Services</h2>
+   <p>We keep the offer simple: a small number of services where we add clear, measurable value.</p>
+
+   <div class="services-container">
+
+      <!-- Left side: cards -->
+      <div class="services-text">
+         <div class="service-card">
+            <h3>Analytics, Insights & Performance Reporting</h3>
+            <p>We help operators turn raw data into clear insights that support better decisions.</p>
+         </div>
+
+         <div class="service-card">
+            <h3>Mid-man sourcing & deal support</h3>
+            <p>We connect qualified buyers and sellers in commodities and energy.</p>
+         </div>
+      </div>
+
+      <!-- Right side image -->
+      <div class="services-image">
+         <img src="analytic_image.png" alt="Data analytics illustration">
+      </div>
+
+   </div>
+ </div>
+</section>
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+     <span class="logo-main">ALTERNATE PATH</span>
+     <span class="logo-tag">data · ai · deals</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="file:///C:/Users/annab/Downloads/index_1.html#about">About</a>
+      <a href="file:///C:/Users/annab/Downloads/index_1.html#services">Services</a>
+      <a href="file:///C:/Users/annab/Downloads/index_1.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Practical consulting to grow performance and unlock new deals</h1>
+        <p>
+          Alternate Path Consulting helps operators and investors use data and AI
+          to make better decisions, and connects qualified buyers and sellers in
+          commodities and energy with clear, transparent structures.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="file:///C:/Users/annab/Downloads/index_2.html#contact">Book a call</a>
+          <a class="btn btn-outline" href="file:///C:/Users/annab/Downloads/index_2.html#services">View services</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Why clients work with us</h3>
+        <p>
+          Blend of real-world top companies trading experience, data science, and functional
+          consulting across financial services, social real estate and energy.
+        </p>
+        <div class="hero-stats">
+          <div>
+            <strong>10+ yrs</strong>
+            Commodities &amp; banking
+          </div>
+          <div>
+            <strong>8+ yrs</strong>
+            Data &amp; AI projects
+          </div>
+          <div>
+            <strong>EU &amp; APAC Experience</strong>
+            Singapore-based &amp; Experience across EU &amp; APAC
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Alternate Path</h2>
+      <p class="section-subtitle">
+        Alternate Path Consulting sits at the intersection of data, operations
+        and markets. We help operators make decisions based on evidence rather
+        than gut feel. In energy and commodities, we act as a trusted connector-matching qualified buyers and sellers, clarifying terms, and helping both sides take the next step toward a successful deal.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Operator perspective</h3>
+          <p>
+            Experience working inside trading houses, banks and data teams means
+            we understand both the commercial and technical sides of a problem.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Hands-on analytics</h3>
+          <p>
+            We focus on practical data and AI use-cases: pricing, demand
+            forecasting, retention, utilisation and portfolio reporting.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Trusted middle path</h3>
+          <p>
+            In commodities and energy, we act as a careful connector:
+            pre-screening, clarifying terms and helping both sides move from
+            interest to executable structure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+<section id="services" class="services-section">
+
+  <div class="container">
+    <h2>Services</h2>
+    
+
+    <div class="services-container">
+
+      <!-- LEFT COLUMN: TWO SERVICE CARDS -->
+      <div class="services-text">
+
+        <div class="service-card">
+          <span class="tag">Data &amp; AI Consulting</span>
+          <h3>Analytics, Insights &amp; Performance Reporting</h3>
+          <p>
+            We help operators turn raw data into clear insights that support better business decisions.           	  </p>
+        </div>
+
+        <div class="service-card">
+          <span class="tag">Commodities &amp; Energy</span>
+          <h3>Mid-man sourcing &amp; deal support</h3>
+          <p>
+            We discreetly connect qualified buyers and sellers in commodities and energy.       
+	  </p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: ILLUSTRATION -->
+      <div class="services-image">
+        <img src="analytic_image.png" alt="Data analytics illustration">
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">
+        Share a little about your situation and we’ll come back with a simple
+        view of whether and how we can help.
+      </p>
+      <div class="contact-grid">
+        <div>
+          <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" required="">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required="">
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required=""></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Send message
+            </button>
+          </form>
+        </div>
+        <div>
+          <div class="card">
+            <h3>Other ways to reach us</h3>
+            <p>
+              Email: <strong>annabel_annabel@hotmail.com</strong><br>
+              LinkedIn: <strong>https://www.linkedin.com/in/annabelpan/</strong><br>
+              Location: <strong>Singapore (serving APAC &amp; beyond)</strong>
+            </p>
+            <p style="margin-top:10px;">
+              If preferred, we can start with a short video call to understand
+              your needs before suggesting any engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <span>© <span id="year">2025</span> Alternate Path Consulting.</span>
+    <span>Data, AI &amp; commodity sourcing advisory.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+
+</body></html>
